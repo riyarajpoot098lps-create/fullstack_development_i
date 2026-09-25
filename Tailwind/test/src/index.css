@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.heading{
+  @apply text-3xl font-bold underline text-center bg-blue-900;
+}
+.image{
+  @apply w-2 h-auto mx-auto mt-4;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-slate-100">
+
+
+    <div class="flex min-h-screen">
+
+
+        <!-- Sidebar -->
+
+        <aside class="w-60 bg-slate-900 text-slate-300 p-5 hidden md:block">
+
+            <h2 class="text-xl font-bold text-white mb-8">
+                AdminPro
+            </h2>
+
+
+            <div class="flex flex-col gap-2">
+
+                <a href="#" class="bg-indigo-600 text-white px-3 py-2 rounded">
+                    🏠 Dashboard
+                </a>
+
+                <a href="#" class="px-3 py-2 hover:bg-slate-800 rounded">
+                    📊 Analytics
+                </a>
+
+                <a href="#" class="px-3 py-2 hover:bg-slate-800 rounded">
+                    👥 Users
+                </a>
+
+                <a href="#" class="px-3 py-2 hover:bg-slate-800 rounded">
+                    🛒 Orders
+                </a>
+
+                <a href="#" class="px-3 py-2 hover:bg-slate-800 rounded">
+                    📦 Products
+                </a>
+
+                <a href="#" class="px-3 py-2 hover:bg-slate-800 rounded">
+                    ⚙️ Settings
+                </a>
+
+            </div>
+
+
+            <div class="mt-20 border-t border-slate-700 pt-5">
+
+                <p class="text-sm text-white">
+                    👩 Riya
+                </p>
+
+                <p class="text-xs text-slate-400">
+                    Admin
+                </p>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- Right Side -->
+
+        <div class="flex-1">
+
+
+            <!-- Header -->
+
+            <header class="h-16 bg-white border-b flex items-center justify-between px-4 md:px-6">
+
+
+                <div class="flex items-center gap-3">
+
+                    <button class="md:hidden text-xl">
+                        ☰
+                    </button>
+
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        class="border rounded-lg px-3 py-2 w-40 md:w-64 text-sm"
+                    >
+
+                </div>
+
+
+                <div class="flex items-center gap-5">
+
+                    <span>🔔</span>
+
+                    <div class="flex items-center gap-2">
+
+                        <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+                            👩
+                        </div>
+
+                        <span class="hidden md:block text-sm">
+                            Riya
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- Main Content -->
+
+            <main class="p-4 md:p-8">
+
+
+                <div class="mb-6">
+
+                    <h1 class="text-2xl font-bold text-slate-900">
+                        Dashboard
+                    </h1>
+
+                    <p class="text-slate-500 text-sm mt-1">
+                        Here's what's happening with your business today.
+                    </p>
+
+                </div>
+
+
+
+                <!-- KPI Cards -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+                    <!-- Card 1 -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between items-center">
+
+                            <p class="text-sm text-slate-500">
+                                Total Revenue
+                            </p>
+
+                            <span class="bg-green-100 p-2 rounded-lg">
+                                💰
+                            </span>
+
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-3">
+                            ₹24,532
+                        </h2>
+
+                        <p class="text-green-600 text-sm mt-2">
+                            ↑ 12% from last month
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Card 2 -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between items-center">
+
+                            <p class="text-sm text-slate-500">
+                                Total Orders
+                            </p>
+
+                            <span class="bg-blue-100 p-2 rounded-lg">
+                                🛒
+                            </span>
+
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-3">
+                            892
+                        </h2>
+
+                        <p class="text-green-600 text-sm mt-2">
+                            ↑ 8% from last month
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Card 3 -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between items-center">
+
+                            <p class="text-sm text-slate-500">
+                                Active Users
+                            </p>
+
+                            <span class="bg-purple-100 p-2 rounded-lg">
+                                👥
+                            </span>
+
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-3">
+                            3,521
+                        </h2>
+
+                        <p class="text-green-600 text-sm mt-2">
+                            ↑ 14% from last month
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Card 4 -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between items-center">
+
+                            <p class="text-sm text-slate-500">
+                                Conversion Rate
+                            </p>
+
+                            <span class="bg-orange-100 p-2 rounded-lg">
+                                📈
+                            </span>
+
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-3">
+                            4.2%
+                        </h2>
+
+                        <p class="text-green-600 text-sm mt-2">
+                            ↑ 2% from last month
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Revenue + Orders -->
+
+                <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mt-6">
+
+
+                    <!-- Revenue -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+
+                        <div class="flex justify-between items-center">
+
+                            <div>
+
+                                <h2 class="font-semibold text-slate-900">
+                                    Revenue Overview
+                                </h2>
+
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Monthly revenue
+                                </p>
+
+                            </div>
+
+                            <select class="border rounded px-2 py-1 text-sm">
+
+                                <option>2026</option>
+                                <option>2025</option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Simple Bar Chart -->
+
+                        <div class="h-56 flex items-end justify-around mt-6 border-b">
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-16 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Jan
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-24 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Feb
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-20 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Mar
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-32 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Apr
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-28 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    May
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-400 w-7 h-40 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Jun
+                                </span>
+
+                            </div>
+
+
+                            <div class="flex flex-col items-center">
+
+                                <div class="bg-indigo-500 w-7 h-48 rounded-t"></div>
+
+                                <span class="text-xs text-slate-500 mt-2">
+                                    Jul
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Recent Orders -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between mb-4">
+
+                            <h2 class="font-semibold">
+                                Recent Orders
+                            </h2>
+
+                            <a href="#" class="text-indigo-600 text-sm">
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="overflow-x-auto">
+
+                            <table class="w-full text-sm">
+
+                                <tr class="border-b text-slate-500">
+
+                                    <th class="text-left p-2">
+                                        Customer
+                                    </th>
+
+                                    <th class="text-left p-2">
+                                        Amount
+                                    </th>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Rahul
+                                    </td>
+
+                                    <td class="p-2">
+                                        ₹2,499
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Priya
+                                    </td>
+
+                                    <td class="p-2">
+                                        ₹4,099
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Aman
+                                    </td>
+
+                                    <td class="p-2">
+                                        ₹1,299
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="p-2">
+                                        Neha
+                                    </td>
+
+                                    <td class="p-2">
+                                        ₹2,799
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Traffic + Products -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+
+
+                    <!-- Traffic -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+
+                        <div class="flex justify-between">
+
+                            <div>
+
+                                <h2 class="font-semibold">
+                                    Traffic Overview
+                                </h2>
+
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Weekly visitors
+                                </p>
+
+                            </div>
+
+                            <span class="text-green-600 text-sm">
+                                +18%
+                            </span>
+
+                        </div>
+
+
+                        <h2 class="text-2xl font-bold mt-4">
+                            8,432
+                        </h2>
+
+
+                        <div class="flex items-end justify-around h-36 mt-4">
+
+
+                            <div class="bg-blue-400 w-7 h-12 rounded-t"></div>
+
+                            <div class="bg-blue-400 w-7 h-20 rounded-t"></div>
+
+                            <div class="bg-blue-400 w-7 h-16 rounded-t"></div>
+
+                            <div class="bg-blue-400 w-7 h-28 rounded-t"></div>
+
+                            <div class="bg-blue-400 w-7 h-24 rounded-t"></div>
+
+                            <div class="bg-blue-400 w-7 h-32 rounded-t"></div>
+
+                            <div class="bg-blue-500 w-7 h-36 rounded-t"></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Top Products -->
+
+                    <div class="bg-white border rounded-xl p-5">
+
+                        <div class="flex justify-between mb-4">
+
+                            <h2 class="font-semibold">
+                                Top Products
+                            </h2>
+
+                            <a href="#" class="text-indigo-600 text-sm">
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="overflow-x-auto">
+
+                            <table class="w-full text-sm">
+
+                                <tr class="border-b text-slate-500">
+
+                                    <th class="text-left p-2">
+                                        Product
+                                    </th>
+
+                                    <th class="text-left p-2">
+                                        Sales
+                                    </th>
+
+                                    <th class="text-left p-2">
+                                        Change
+                                    </th>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Laptop Pro
+                                    </td>
+
+                                    <td class="p-2">
+                                        2,450
+                                    </td>
+
+                                    <td class="p-2 text-green-600">
+                                        +12%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Earbuds
+                                    </td>
+
+                                    <td class="p-2">
+                                        1,900
+                                    </td>
+
+                                    <td class="p-2 text-green-600">
+                                        +8%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="border-b">
+
+                                    <td class="p-2">
+                                        Smart Watch
+                                    </td>
+
+                                    <td class="p-2">
+                                        1,203
+                                    </td>
+
+                                    <td class="p-2 text-green-600">
+                                        +6%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td class="p-2">
+                                        Backpack
+                                    </td>
+
+                                    <td class="p-2">
+                                        902
+                                    </td>
+
+                                    <td class="p-2 text-red-600">
+                                        -2%
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>selector</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        color:blue;
+       }
+       #myid{
+        color: red;
+       }
+       .myclass{
+        color: green;
+       }
+       input[type="text"]{
+        border-radius: 15px;
+        border: red;
+       }
+    </style>
+</head>
+<body>
+    <h2>Selectors </h2>
+    <ul>
+        <li>Element Selector</li>
+        <li id="myid">Id Selector</li>
+        <li class="myclass">Class Selector</li>
+        <li class="myclass">Group Selector</li>
+        <li>Universal Selector</li>
+        <li>Attribute Selector</li>
+        <li>Pseudo-class Selector</li>
+        <li>Pseudo-element Selector</li>
+        <li>Combinator Selector</li>
+    </ul>
+    <input type="text" placeholder="Enter your name" name="name" required>
+    <br/>
+    <input type="email" placeholder="Enter your email" name="email" required>
+</body>

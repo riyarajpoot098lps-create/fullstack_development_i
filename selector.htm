@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors tutorial</title>
+    <style>
+        #one {
+            color: red;
+        }
+        .two {
+            color: blue;
+        }
+        li[for="label"] {
+            color: green;
+        }
+        span {
+            color: orange;
+        }
+        ul>li.two>span{
+            color: violet;
+        }
+        li:nth-child(odd) {
+            color: grey;
+        }
+        li:nth-child(even) {
+            color: brown;
+        }
+        li:hover {
+            color: pink;
+        }
+        li:last-child{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="two">Universal</li>
+        <li id="one">ID</li>
+        <li class="two">
+            class
+            <span>class</span>
+        </li>
+        <li for="label">attribute</li>
+        <li>element
+            <span>E1</span>
+        </li> 
+        <li>combinator</li>
+        <li>pseudo-class</li>
+        <li>pseudo-element</li>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    
+</body>
+</html>

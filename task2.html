@@ -1,0 +1,544 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #F8FAFC;
+            font-family: Arial;
+        }
+
+        .navbar {
+            height: 64px;
+            background: white;
+            border-bottom: 1px solid #E5E7EB;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 28px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .search-box {
+            width: 420px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+
+            padding: 0 12px;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #6B7280;
+            font-size: 13px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 30px;
+        }
+
+        aside {
+            background: white;
+            padding: 16px;
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+        }
+
+        aside h3 {
+            margin-top: 0;
+        }
+
+        aside h4 {
+            margin-bottom: 8px;
+        }
+
+        aside div {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #2563EB;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 10px;
+            padding: 15px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .category {
+            color: #6B7280;
+            font-size: 13px;
+        }
+
+        .rating {
+            color: #F59E0B;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .old {
+            color: #6B7280;
+            font-size: 13px;
+            text-decoration: line-through;
+        }
+
+        .card button {
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="https://picsum.photos/48/48?random=30"
+                 style="width:32px;height:32px;border-radius:8px;">
+            TechNest
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search gadgets and accessories...">
+            🔎
+        </div>
+
+        <div class="nav-icons">
+            <span>🛍️</span>
+            <span>👤</span>
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+
+    <main class="container">
+
+        <div class="breadcrumb">
+            Technology &nbsp;›&nbsp; Smartphones
+        </div>
+
+
+        <div class="main">
+
+            <!-- Sidebar -->
+
+            <aside>
+
+                <h3>Shop Filters</h3>
+
+                <div>
+                    <h4>Category</h4>
+
+                    <input type="checkbox"> Smartphones<br>
+                    <input type="checkbox"> Smartwatches<br>
+                    <input type="checkbox"> Headphones<br>
+                    <input type="checkbox"> Accessories
+                </div>
+
+
+                <div>
+                    <h4>Price Range</h4>
+
+                    <input type="checkbox"> ₹0 - ₹15,000<br>
+                    <input type="checkbox"> ₹15,000 - ₹30,000<br>
+                    <input type="checkbox"> ₹30,000 - ₹50,000<br>
+                    <input type="checkbox"> ₹50,000+
+                </div>
+
+
+                <div>
+                    <h4>Brand</h4>
+
+                    <input type="checkbox"> Samsung<br>
+                    <input type="checkbox"> OnePlus<br>
+                    <input type="checkbox"> Google<br>
+                    <input type="checkbox"> Apple
+                </div>
+
+
+                <button>
+                    Update Results
+                </button>
+
+            </aside>
+
+
+            <!-- Products -->
+
+            <div>
+
+                <div style="display:flex;justify-content:space-between;margin-bottom:15px;">
+
+                    <b>Showing 9 products</b>
+
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+
+                </div>
+
+
+                <div class="products">
+
+
+                    <!-- 1 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=31">
+
+                        <span class="category">
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            Samsung Galaxy A55
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ₹34,999
+                            <span class="old">₹39,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 2 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=32">
+
+                        <span class="category">
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            OnePlus Nord 4
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <div class="price">
+                            ₹29,999
+                            <span class="old">₹34,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 3 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=33">
+
+                        <span class="category">
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            Google Pixel 8a
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ₹42,999
+                            <span class="old">₹49,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 4 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=34">
+
+                        <span class="category">
+                            Smartwatch
+                        </span>
+
+                        <h3>
+                            Galaxy Watch 6
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <div class="price">
+                            ₹18,499
+                            <span class="old">₹22,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 5 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=35">
+
+                        <span class="category">
+                            Headphones
+                        </span>
+
+                        <h3>
+                            Sony WH-CH720N
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ₹8,990
+                            <span class="old">₹12,990</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 6 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=36">
+
+                        <span class="category">
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            iPhone 15
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ₹59,999
+                            <span class="old">₹69,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 7 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=37">
+
+                        <span class="category">
+                            Earbuds
+                        </span>
+
+                        <h3>
+                            OnePlus Buds 3
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <div class="price">
+                            ₹4,999
+                            <span class="old">₹6,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 8 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=38">
+
+                        <span class="category">
+                            Smartphone
+                        </span>
+
+                        <h3>
+                            Samsung Galaxy S24
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★★
+                        </div>
+
+                        <div class="price">
+                            ₹64,999
+                            <span class="old">₹74,999</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                    <!-- 9 -->
+
+                    <div class="card">
+
+                        <img src="https://picsum.photos/300/200?random=39">
+
+                        <span class="category">
+                            Smartwatch
+                        </span>
+
+                        <h3>
+                            Apple Watch SE
+                        </h3>
+
+                        <div class="rating">
+                            ★★★★☆
+                        </div>
+
+                        <div class="price">
+                            ₹24,990
+                            <span class="old">₹29,990</span>
+                        </div>
+
+                        <button>
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+```

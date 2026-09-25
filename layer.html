@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* @layer special, base;
+        @layer base{
+            .btn{
+                font-size: 35px;
+             }
+        }
+        @layer special{
+            .btn-submit{
+                font-size: 40px;
+            }
+        } */
+        @layer dark, light;
+        @layer light {
+            body {
+                background-color: white;
+                color: black;
+            }
+            .btn {
+                font-size: 35px;
+                background-color: lightgray;
+                color: black;
+            }
+        }
+
+        @layer dark {
+                body {
+                    background-color: #121212;
+                    color: white;
+                }
+                .btn {
+                    background-color: #333;
+                    color: white;
+                }
+            }
+        @media (max-width: 500px) {
+            .btn{
+                background-color: blue;
+                color : yellow;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button class="btn">Click Me!</button>
+</body>
+</html>

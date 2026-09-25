@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sticky Overlapping Boxes</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#ffffff;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    width:100%;
+    margin:0 auto;
+}
+
+/* Common box */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6{
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:80px;
+    font-weight:bold;
+
+    position:sticky;
+    top:0;
+}
+
+/* Box 1 */
+.box1{
+    background:red;
+    z-index:1;
+}
+
+/* Box 2 */
+.box2{
+    background:blue;
+    z-index:2;
+}
+
+/* Box 3 */
+.box3{
+    background:green;
+    z-index:3;
+}
+
+/* Box 4 */
+.box4{
+    background:yellow;
+    z-index:4;
+}
+
+/* Box 5 */
+.box5{
+    background:orange;
+    z-index:5;
+}
+
+/* Box 6 */
+.box6{
+    background:purple;
+    z-index:6;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="box1">1</div>
+
+    <div class="box2">2</div>
+
+    <div class="box3">3</div>
+
+    <div class="box4">4</div>
+
+    <div class="box5">5</div>
+
+    <div class="box6">6</div>
+
+</div>
+
+</body>
+</html>

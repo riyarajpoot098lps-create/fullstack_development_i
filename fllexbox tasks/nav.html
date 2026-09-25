@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navbar</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:#1f2937;
+            padding:15px 50px;
+            border-radius:10px;
+        }
+
+        .logo{
+            color:white;
+            font-size:26px;
+            font-weight:bold;
+            padding:5px 10px;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        .menu a:hover{
+            color:#38bdf8;
+        }
+
+        .login-btn{
+            background:#38bdf8;
+            color:white;
+            padding:8px 18px;
+            border-radius:20px;
+        }
+
+        .login-btn:hover{
+            background:#0ea5e9;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Nav Logo</div>
+
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+</body>
+</html>

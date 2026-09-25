@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*
+
+                :enabled
+                :disabled
+                :checked
+                :not()
+                :valid
+                :invalid
+                :required
+                :optional
+                :in-range
+                :out-of-range
+                :placeholder
+                :placeholder-shown
+                :read-only
+                :read-write
+                :nth-child()
+*/
+        input{
+            margin:3px;
+            border-width:0 0 2px 0;
+            border-color:blue;
+        }
+        input:enabled{
+            color:black;
+            background-color:lightgrey;
+        }
+        input:disabled{
+            background-color:grey !important;
+            border-width:0px;
+            color:white;
+        }
+        input:required{
+            font-family:Arial;
+        }
+        input:optional{
+            font-family:montana;
+            font-style:italic;
+        }
+        input:in-range {
+            font-weight: 900;
+        }
+
+        input:out-of-range {
+            font-weight: 900;
+        }
+        input:valid{
+            color:green;
+        }
+        input:invalid{
+            color:red
+        }
+        input:checked{
+            accent-color:orange;
+        }
+        input:read-only{
+            background-color:transparent;
+            border-width:0px;
+        }
+        input:read-write{
+            box-shadow: 0 0 5px black;
+        }
+        input:placeholder-shown{
+            font-size:20px;
+        }
+        li:nth-child(odd){
+            color:blue;
+        }
+        li:nth-child(even){
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" value="Mr." style="width:20px;" readonly>
+        <input type="text" placeholder="First Name" required><br><br>
+        <input type="text" placeholder="Middle Name"><br><br>
+        <input type="text" placeholder="Last Name" required><br><br>
+        <input type="email" placeholder="Email"><br><br>
+        <input type="Number" placeholder ="Age" min="18" max="150"><br><br>
+        <input type="text" value = "Mathura" disabled><br><br>
+        <input type="checkbox" checked><br><br>
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </form>
+</body>
+</html>

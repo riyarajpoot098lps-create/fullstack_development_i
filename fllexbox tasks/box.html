@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stacked Box Layout</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8eadc;
+    color: #fff;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.hero {
+    min-height: 100vh;
+}
+
+.hero h1 {
+    position: fixed;
+    z-index: 5;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 4rem);
+    margin: 0;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.95), 0 0 18px rgba(255,255,255,0.15);
+}
+
+.stack-container {
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    padding: 100px 30px 40px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.box .inner {
+    width: min(90%, 900px);
+    min-height: min(70vh, 620px);
+    display: grid;
+    grid-template-columns: 1fr minmax(160px, 240px);
+    align-items: center;
+    gap: 30px;
+    padding: 34px;
+    background: rgba(34, 28, 16, 0.78);
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.55);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.9), 0 0 16px rgba(255,255,255,0.1);
+}
+
+.book-author {
+    margin-top: 14px;
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-weight: 700;
+    opacity: 0.96;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.book-type {
+    margin-top: 12px;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+.book-cover {
+    width: min(34vw, 240px);
+    height: min(42vw, 320px);
+    min-width: 180px;
+    min-height: 250px;
+    border-radius: 12px;
+    border: 5px solid #fff;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+    filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.6));
+}
+
+.box:nth-child(1) {
+    background-image: linear-gradient(rgba(35, 10, 0, 0.55), rgba(23, 10, 7, 0.75)), url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(2) {
+    background-image: linear-gradient(rgba(53, 23, 5, 0.70), rgba(8, 44, 28, 0.75)), url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(3) {
+    background-image: linear-gradient(rgba(52, 14, 50, 0.62), rgba(25, 3, 31, 0.82)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(4) {
+    background-image: linear-gradient(rgba(108, 36, 11, 0.67), rgba(28, 20, 5, 0.84)), url('https://images.unsplash.com/photo-1495446815908-29f5441d4d9b?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(5) {
+    background-image: linear-gradient(rgba(28, 48, 48, 0.60), rgba(13, 35, 42, 0.85)), url('https://images.unsplash.com/photo-1529148482759-b35b25c5f217?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(6) {
+    background-image: linear-gradient(rgba(72, 10, 20, 0.62), rgba(29, 9, 11, 0.86)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(7) {
+    background-image: linear-gradient(rgba(50, 65, 28, 0.63), rgba(30, 60, 15, 0.88)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(8) {
+    background-image: linear-gradient(rgba(20, 28, 70, 0.62), rgba(9, 14, 44, 0.90)), url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(9) {
+    background-image: linear-gradient(rgba(49, 30, 13, 0.58), rgba(15, 12, 11, 0.90)), url('https://images.unsplash.com/photo-1474932430478-367dbb6832c1?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(10) {
+    background-image: linear-gradient(rgba(42, 21, 58, 0.60), rgba(24, 16, 31, 0.88)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80');
+}
+
+.box:nth-child(1) .book-cover { background-image: url('https://images.unsplash.com/photo-1541961017774-22349e4a7c32?auto=format&fit=crop&q=80'); }
+.box:nth-child(2) .book-cover { background-image: url('https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80'); }
+.box:nth-child(3) .book-cover { background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80'); }
+.box:nth-child(4) .book-cover { background-image: url('https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80'); }
+.box:nth-child(5) .book-cover { background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&q=80'); }
+.box:nth-child(6) .book-cover { background-image: url('https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80'); }
+.box:nth-child(7) .book-cover { background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80'); }
+.box:nth-child(8) .book-cover { background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80'); }
+.box:nth-child(9) .book-cover { background-image: url('https://images.unsplash.com/photo-1495446815908-29f5441d4d9b?auto=format&fit=crop&q=80'); }
+.box:nth-child(10) .book-cover { background-image: url('https://images.unsplash.com/photo-1541961017774-22349e4a7c32?auto=format&fit=crop&q=80'); }
+
+.box:nth-child(1) .inner { transform: rotate(-2deg); }
+.box:nth-child(2) .inner { transform: rotate(2.2deg); }
+.box:nth-child(3) .inner { transform: rotate(-1deg); }
+.box:nth-child(4) .inner { transform: rotate(2.8deg); }
+.box:nth-child(5) .inner { transform: rotate(-2.7deg); }
+.box:nth-child(6) .inner { transform: rotate(1deg); }
+.box:nth-child(7) .inner { transform: rotate(-2deg); }
+.box:nth-child(8) .inner { transform: rotate(3deg); }
+.box:nth-child(9) .inner { transform: rotate(-1.7deg); }
+.box:nth-child(10) .inner { transform: rotate(2deg); }
+
+@media (max-width: 720px) {
+    .box .inner {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .book-cover {
+        width: min(50vw, 200px);
+        height: 250px;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Hindi Literature Books</h1>
+        <div class="stack-container">
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Godaan</div>
+                        <div class="book-author">Munshi Premchand</div>
+                        <div class="book-type">Novel</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Gaban</div>
+                        <div class="book-author">Munshi Premchand</div>
+                        <div class="book-type">Novel</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Nirmala</div>
+                        <div class="book-author">Munshi Premchand</div>
+                        <div class="book-type">Novel</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Karmabhoomi</div>
+                        <div class="book-author">Premchand</div>
+                        <div class="book-type">Novel</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Rangbhoomi</div>
+                        <div class="book-author">Premchand</div>
+                        <div class="book-type">Drama</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Sahitya ki Bhavna</div>
+                        <div class="book-author">Mahadevi Verma</div>
+                        <div class="book-type">Essays</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Yama</div>
+                        <div class="book-author">Muktibodh</div>
+                        <div class="book-type">Poetry</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Chidambara</div>
+                        <div class="book-author">Mahadevi Verma</div>
+                        <div class="book-type">Poetry</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Madhushala</div>
+                        <div class="book-author">Harivansh Rai Bachchan</div>
+                        <div class="book-type">Poetry</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inner">
+                    <div class="book-info">
+                        <div class="book-title">Kavya Ki Rachna</div>
+                        <div class="book-author">Hindi Literature</div>
+                        <div class="book-type">Collection</div>
+                    </div>
+                    <div class="book-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Card</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .card{
+            width:300px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+            overflow:hidden;
+            text-align:center;
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card h2{
+            margin:15px 0 10px;
+        }
+
+        .card p{
+            padding:0 15px;
+            color:#555;
+            font-size:15px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin:20px 0;
+            padding:10px 20px;
+            background:#007bff;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card">
+        <img src="https://via.placeholder.com/300x220" alt="Product">
+
+        <h2>Wireless Headphones</h2>
+
+        <p>
+            High-quality wireless headphones with deep bass,
+            noise cancellation, and up to 20 hours of battery life.
+        </p>
+
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+    
+    <div class="card">
+        <img src="https://via.placeholder.com/300x220" alt="Product">
+
+        <h2>Smart Watch</h2>
+
+        <p>
+            Stylish smart watch with fitness tracking, heart rate monitoring,
+            and customizable watch faces.
+        </p>
+
+        <a href="#" class="btn">Buy Now</a>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x220" alt="Product">
+
+        <h2>Bluetooth Speaker</h2>
+
+        <p>
+            Portable Bluetooth speaker with rich sound, waterproof design,
+            and up to 12 hours of playtime.
+        </p>
+
+        <a href="#" class="btn">Buy Now</a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sticky Overlapping Boxes</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+}
+.slider{
+    width: 100%;
+    display:inline-flex;
+    overflow:scroll;
+    scrollbar-width:none;
+}
+.item{
+    min-width: 100vw;
+    height: 840px;
+    position:sticky;
+    left:0;
+    text-align:center;
+
+    font-size:80px;
+    color:white;
+    -webkit-text-stroke: 1px black;
+
+}
+    </style>
+</head>
+
+<body>
+
+<div class="slider">
+
+    <div class="item" style="background:red;">1</div>
+
+    <div class="item" style="background:blue;">2</div>
+
+    <div class="item" style="background:green;">3</div>
+
+    <div class="item" style="background:yellow;">4</div>
+
+    <div class="item" style="background:purple;">5</div>
+
+    <div class="item" style="background:pink;">6</div>
+
+</div>
+
+</body>
+</html>
