@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Quiz Arena</title>
+    <style>
+       
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+
+/* Main Quiz Box */
+
+.quiz {
+    width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+
+
+/* Question Number and Score */
+
+#questionNumber {
+    font-weight: bold;
+    color: #555;
+}
+
+#score {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+
+/* Timer */
+
+#timer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+
+/* Question */
+
+#question {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+
+/* Options */
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+#options button {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+/* Hover */
+
+#options button:hover {
+    background: #f0f0f0;
+}
+
+
+/* Explanation */
+
+#explanation {
+    margin-top: 20px;
+    padding: 12px;
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+
+/* Next Button */
+
+#nextBtn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Restart Button */
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* Button Hover */
+
+#nextBtn:hover,
+#restartBtn:hover {
+    opacity: 0.8;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h1>JS Quiz Arena</h1>
+
+    <p id="questionNumber">Q 1/5</p>
+
+    <p id="score">Score: 0</p>
+
+    <p id="timer">Time: 30</p>
+
+    <h2 id="question">
+        Question
+    </h2>
+
+    <div id="options">
+    </div>
+
+    <p id="explanation">
+    </p>
+
+    <button id="nextBtn">Next</button>
+
+    <button id="restartBtn">Restart</button>
+    
+
+    <script src="index1.js"></script>
+
+</body>
+
+</html>
