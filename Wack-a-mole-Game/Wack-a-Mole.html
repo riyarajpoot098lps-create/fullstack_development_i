@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whack-a-Mole</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        #grid {
+            width: 300px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .cell {
+            height: 90px;
+            border: 2px solid black;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .mole {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Whack-a-Mole</h1>
+
+    <h2>Score: <span id="score">0</span></h2>
+
+    <button id="startBtn">Start Game</button>
+
+    <div id="grid"></div>
+
+    <script src="Whack-a-Mole.js"></script>
+
+</body>
+</html>
